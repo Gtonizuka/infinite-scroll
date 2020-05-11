@@ -75,10 +75,10 @@ const Layout = () => {
 
     return (
         <div className="wrapper">
-            <label htmlFor="pager">Change max numbers of houses per page (performance testing). Currently {maxPage}</label>
+            <label htmlFor="pager" className="input-label">Change max numbers of houses per page (performance testing). Currently {maxPage}</label>
             <div className={'input__add-on'}>
-                <input type="number" name="pager" ref={numberInput} />
-                <button onClick={handleClick}>Set</button>
+                <input type="number" name="pager" ref={numberInput} className='input-field' />
+                <button onClick={handleClick} className='btn-input'>Set</button>
             </div>
             <div className={`grid-container ${houses.loading ? 'is-loading' : ''}`}>
                 {houses.houses.map((house, index) => <Card data={house} key={index} />)}
