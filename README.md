@@ -43,7 +43,7 @@ For the style I am using CSS grids as default two columns that goes down to one 
 I am using Jest and Enzyme for unit testing. I have tested the main functionalities in the `Card` component and some of the functionalities in `Layout`. In `Layout` I am not mocking the fetch request due to time constraints but I am checking the state change triggered by side effects.
 
 ## TODO list
-- Improve spinner architecture (e.g. maybe it should be shown for X amount of time and then a different error message shown if the server is still unstable. This will avoid disrupting user experience).
+- Improve spinner architecture (e.g. maybe it should be shown for X amount of time and then a different error message appears if the server is still unstable. This will avoid disrupting user experience).
 - Split `Layout` component in subcomponents.
 - Add more in depth tests for `Layout`.
 - Improve catch of server errors that are not 503.
