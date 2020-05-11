@@ -3,8 +3,30 @@
     grid-template-columns: repeat(2, 1fr);
     column-gap: 20px;
     row-gap: 1em;
+    margin-top: 30px;
 }
 
 .is-loading {
     opacity: 0.2;
+}
+
+.input__add-on {
+    display: flex;
+    margin-top: 30px;
+}
+
+input {
+    padding: 10px;
+    font-size: 100%;
+    border: none;
+    max-width: 150px;
+}
+
+button {
+    background: #017163;
+    color: #fff;
+    padding: 12px;
+    height: auto;
+    text-align: center;
+    cursor: pointer;
 }

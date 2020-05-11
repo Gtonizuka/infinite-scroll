@@ -12,6 +12,7 @@ const Layout = () => {
 
     const [houses, housesDispatch] = useReducer(housesReducer, { houses: [], loading: true })
     const [apiPage, apiPageDispatch] = useReducer(apiPageReducer, { page: 0 })
+    const [maxPage, setMaxPage] = useState(10);
 
     // make API calls
     useEffect(() => {
@@ -22,7 +23,7 @@ const Layout = () => {
                 // Prevent default loading of two pages
                 if (apiPage.page !== 0) {
                     const result = await axios.get(
-                        `${API_URL}?page=${apiPage.page}`,
+                        `${API_URL}?page=${apiPage.page}&per_page=${maxPage}`,
                     );
 
                     const { data } = result;
@@ -66,8 +67,20 @@ const Layout = () => {
         }
     }, [scrollObserver, bottomBoundaryRef]);
 
+
+    let numberInput = React.createRef();
+    const handleClick = () => {
+        const value = numberInput.current.value;
+        setMaxPage(value)
+    }
+
     return (
         <div className="wrapper">
+            <label htmlFor="pager">Change max numbers of houses per page (performance testing). Currently {maxPage}</label>
+            <div className={'input__add-on'}>
+                <input type="number" name="pager" ref={numberInput} />
+                <button onClick={handleClick}>Set</button>
+            </div>
             <div className={`grid-container ${houses.loading ? 'is-loading' : ''}`}>
                 {houses.houses.map((house, index) => <Card data={house} key={index} />)}
             </div>

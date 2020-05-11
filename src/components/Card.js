@@ -10,11 +10,18 @@ const Card = ({ data }) => {
         height: '250px',
         backgroundSize: 'cover'
     };
+
+    let formatter = new Intl.NumberFormat('en-US', {
+        style: 'currency',
+        currency: 'USD',
+    });
+
+
     return (
         <div className={'media'}>
             <div className={'media__img'}>
                 <div className={'img-bg'} style={mystyle}></div>
-                <p className={'media__meta'}>${price}</p>
+                <p className={'media__meta'}>{formatter.format(price)}</p>
             </div>
             <div className={'media-body'}>
                 <h3 className={'media__title'}>{address}</h3>
