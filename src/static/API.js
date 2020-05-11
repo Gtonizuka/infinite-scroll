@@ -1,0 +1,1 @@
+export const API_URL = 'http://app-homevision-staging.herokuapp.com/api_project/houses'
