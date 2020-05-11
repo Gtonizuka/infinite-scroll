@@ -25,7 +25,7 @@ const Card = ({ data }) => {
                 <p className={'media__para'}>
                     "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
                 </p>
-                <span className={'favourites'}>Save to my favourites <img src={'/heart.svg'} /></span>
+                <span className={'favourites'}>Save to my favourites <img src={'/heart.svg'} alt="heart icon" /></span>
             </div>
         </div >
     )
