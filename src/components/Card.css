@@ -9,10 +9,13 @@
     padding: 10px;
 }
       
-.media__img img {
-    width: 300px;
-    max-width: 300px;
+.img-bg {
+    float: left;
+    width: 250px;
+    height: 250px;
+    background-size: cover;
 }
+
 
 .media-body {
     padding: 20px;
@@ -42,4 +45,20 @@
 .favourites img {
     margin-bottom: -5px;
     cursor: pointer;
+}
+
+
+@media only screen and (max-width: 910px) {
+    .media {
+        flex-direction: column;
+    }
+
+    .media__img {
+        width: 100%;
+    }
+
+    .media__img .img-bg {
+        width: 100%;
+        background-position: 50%;
+    }
 }

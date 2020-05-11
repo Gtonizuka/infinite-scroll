@@ -30,3 +30,14 @@ button {
     text-align: center;
     cursor: pointer;
 }
+
+/*
+    Media Queries
+*/
+
+@media only screen and (max-width: 910px) {
+    .grid-container {
+        grid-template-columns: repeat(1, 1fr);
+        row-gap: 0.5em;
+    }
+}

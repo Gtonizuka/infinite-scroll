@@ -19,7 +19,6 @@ const Layout = () => {
         housesDispatch({ type: 'IS_LOADING', loading: true })
         const fetchData = async () => {
             try {
-                console.log(apiPage.page)
                 // Prevent default loading of two pages
                 if (apiPage.page !== 0) {
                     const result = await axios.get(
